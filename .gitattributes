@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.star text eol=lf
+*.bzl text eol=lf
+*.rs text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

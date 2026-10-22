@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Starlark specification
+    url: https://github.com/bazelbuild/starlark/blob/master/spec.md
+    about: Language semantics and built-in behavior
+  - name: hashes.bzl
+    url: https://github.com/hermeticbuild/hashes.bzl
+    about: The reference benchmark workload

@@ -1,0 +1,10 @@
+/target
+*.ll
+*.o
+*.s
+*.out
+__pycache__/
+*.py[cod]
+.DS_Store
+.vscode/
+.idea/
