@@ -1,0 +1,28 @@
+[package]
+name = "starlarkc"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.87"
+description = "An LLVM frontend and native x86-64 compiler for Starlark"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/fionera/starlarkc"
+homepage = "https://github.com/fionera/starlarkc"
+documentation = "https://docs.rs/starlarkc"
+authors = ["Fionera"]
+keywords = ["starlark", "llvm", "compiler", "bazel", "codegen"]
+categories = ["compilers", "development-tools::build-utils"]
+
+[[bin]]
+name = "starlarkc"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive", "env"] }
+starlark_syntax = "0.14.2"
+tempfile = "3.13"
+
+[profile.release]
+lto = true
+strip = true

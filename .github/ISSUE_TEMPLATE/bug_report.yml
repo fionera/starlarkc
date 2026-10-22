@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a compiler, runtime, or CLI bug
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A minimal `.star` reproduction is the most useful
+        thing you can include.
+  - type: input
+    id: version
+    attributes:
+      label: starlarkc version
+      description: Output of `starlarkc --version`
+      placeholder: starlarkc 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform and LLVM
+      description: OS/CPU and `clang --version`
+      placeholder: Linux x86_64, clang 19.1.7
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: The smallest Starlark program and command that reproduces the issue
+      render: starlark
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the error text, wrong output, or crash backtrace
+    validations:
+      required: true
+  - type: textarea
+    id: ir
+    attributes:
+      label: Generated IR (optional)
+      description: Relevant `--emit=ir` output, if the issue looks codegen-related
+      render: llvm
+    validations:
+      required: false
